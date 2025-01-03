@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taiwan Realty</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        function Keyword() {
+            const city = [ [1, "臺北市"], [2, "基隆市"], [3, "新北市"], [4, "宜蘭縣"], [5, "連江縣"], [6, "新竹縣"], [7, "桃園市"],  [8, "苗栗縣"],  [9, "臺中市"], [10, "彰化縣"], [11, "南投縣"], 
+         [12, "嘉義市"], [13, "嘉義縣"],  [14, "雲林縣"],  [15, "臺南市"],  [16, "高雄市"], [17,"澎湖縣"],  [18,"金門縣"],  [19, "屏東縣"],  [20,"臺東縣"],  [21,"花蓮縣"]];
+            return (
+                <form action="http://localhost:5000/search" method="post">
+                    <div>
+                        <span>搜尋</span>
+                        <input type='text' placeholder="輸入關鍵字" name="keyword"/>
+                    </div>
+                    <div>
+                        <span>縣市</span>
+                        <select defaultValue="" name="city">
+                            <option value="" disabled hidden>--- Select a city ---</option>
+                            {
+                                city.map(x => <option key={x[0]} value={x[0]}>{x[1]}</option>)
+                            } 
+                        </select>
+
+                    </div>
+                    <input type="submit" value="Submit" />
+                </form>
+            )
+        }
+
+
+
+        root.render(<Keyword/>);
+
+    </script>
+
+
+
+</body>
+</html>

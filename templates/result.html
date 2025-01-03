@@ -1,0 +1,29 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    
+    {% if result == "No lands" %}
+        <p>No lands found</p>
+    {% else %}
+        <ul>
+        {% for land in result %}
+            <li>
+                ID: {{ land.id }}<br>
+                Name: {{ land.name }}<br>
+                City ID: {{ land.city_id }}<br>
+                District: {{ land.dist }}<br>
+                Land Ping: {{ land.land_ping }}<br>
+                Total Price: {{ land.total_price }}<br>
+                Unit Price: {{ land.unit_price }}
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
