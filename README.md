@@ -4,7 +4,7 @@
 You can clone the repository using the following command:
 ```bash
 git clone git@github.com:mike0113/JS_term_project.git
-cd ....
+cd JS_term_project
 ```
 
 ### 2. Set up a Python Virtual Environment
@@ -34,3 +34,23 @@ python search.py
 
 ### 5. Open the frontend
 open search.html on browser
+
+
+-------------------------
+
+In database, there already has two data:
+
+1. name = 秋紅谷, city = 台中市
+
+2. name = 暨南大學, city = 南投縣
+
+So you can search these two data.
+
+Or you may use `sqlite3` to manual add it.
+
+----------------------
+
+This is a simple version of search lands backend and a little frontend.
+
+And I am learning some skill from Flask such as Blueprint, JWT token ...
+
