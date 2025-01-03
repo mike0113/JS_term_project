@@ -3,7 +3,7 @@
 ### 1. Clone the repository:
 You can clone the repository using the following command:
 ```bash
-git clone git@github.com:mike0113/Taiwan-Realty.git
+git clone git@github.com:mike0113/JS_term_project.git
 cd ....
 ```
 
@@ -29,7 +29,7 @@ pip install -r requirements.txt
 ### 4. Run the Flask Server
 Now, you can start the Flask development server with the following command:
 ```bash
-flask search.py
+python search.py
 ```
 
 ### 5. Open the frontend
